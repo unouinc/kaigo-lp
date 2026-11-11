@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>事例インタビュー 寝屋川苑さま（準備中） — WF</title>
+<style>
+:root{--ink:#1a1a1a;--gray-1:#f5f5f5;--gray-2:#e4e4e4;--gray-3:#c9c9c9;--gray-4:#8a8a8a;--line:#d0d0d0;--dark:#3a3a3a;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{width:1440px;min-width:1440px;}
+body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;color:var(--ink);background:#fff;line-height:1.8;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+section{background:#fff;border-bottom:1px solid var(--line);width:1440px;padding:88px 120px;}
+section.tint{background:var(--gray-1);}
+.row{display:flex;}
+.eyebrow{font-size:12px;letter-spacing:.2em;color:var(--gray-4);text-transform:uppercase;margin-bottom:16px;font-weight:600;}
+h1{font-size:50px;line-height:1.45;letter-spacing:.02em;font-weight:700;}
+h2{font-size:30px;line-height:1.6;letter-spacing:.02em;font-weight:700;margin-bottom:16px;}
+h3{font-size:18px;font-weight:700;line-height:1.6;}
+.lead{font-size:16px;color:#333;line-height:2;width:800px;}
+.center{text-align:center;}
+.center .lead{margin:0 auto;}
+.ph{background:var(--gray-1);border:1px dashed var(--gray-3);display:flex;align-items:center;justify-content:center;color:var(--gray-4);font-size:12px;letter-spacing:.1em;}
+.tint .ph{background:#fff;}
+.btn{display:flex;align-items:center;justify-content:center;gap:12px;background:var(--dark);color:#fff;font-size:16px;font-weight:700;height:64px;width:360px;border-radius:3px;letter-spacing:.04em;}
+.btn-line{display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;border:1px solid var(--ink);font-size:15px;font-weight:700;height:64px;width:280px;border-radius:3px;}
+.note{font-size:12px;color:var(--gray-4);line-height:1.8;}
+
+/* header */
+.hd{width:1440px;height:80px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 40px;}
+.hd .logo{display:flex;align-items:center;gap:10px;width:300px;}
+.hd .wm{font-size:14px;font-weight:700;letter-spacing:.12em;line-height:1.3;}
+.hd .wm small{display:block;font-size:9px;font-weight:600;letter-spacing:.1em;color:var(--gray-4);}
+.hd nav{display:flex;gap:30px;flex:1;justify-content:flex-end;margin-right:32px;}
+.hd nav a{font-size:13.5px;font-weight:600;letter-spacing:.04em;}
+.hd .hbtn{background:var(--dark);color:#fff;font-size:13px;font-weight:700;height:44px;width:220px;display:flex;align-items:center;justify-content:center;border-radius:3px;}
+
+/* fv */
+.fv{padding:80px 120px 72px;background:var(--gray-1);}
+.fv .l{width:640px;margin-right:60px;}
+.fv .r{width:500px;}
+.fv .tag{display:flex;gap:8px;margin-bottom:24px;}
+.chip{background:var(--gray-2);font-size:12px;font-weight:600;padding:4px 12px;border-radius:2px;}
+.fv .sub{font-size:17px;line-height:2;color:#333;margin:24px 0 36px;}
+.fv .kv{width:500px;height:420px;background:#fff;}
+.fv .cta{display:flex;gap:16px;align-items:center;}
+.stats{display:flex;gap:20px;margin-top:64px;}
+.stat{width:386px;background:#fff;border:1px solid var(--line);padding:28px 28px 26px;}
+.stat .k{font-size:12px;color:var(--gray-4);font-weight:600;letter-spacing:.06em;}
+.stat .v{font-size:44px;font-weight:700;line-height:1.3;margin:4px 0 6px;}
+.stat .v small{font-size:18px;margin-left:4px;}
+.stat .d{font-size:13px;color:#444;line-height:1.8;}
+
+/* flow diagram */
+.flow{display:flex;align-items:center;margin-top:48px;}
+.fbox{width:270px;height:150px;border:1px solid var(--ink);background:#fff;padding:22px 22px;}
+.fbox .n{font-size:11px;color:var(--gray-4);font-weight:600;letter-spacing:.14em;}
+.fbox b{display:block;font-size:17px;margin:4px 0 6px;}
+.fbox p{font-size:13px;color:#444;line-height:1.7;}
+.farr{width:60px;display:flex;justify-content:center;}
+.fsplit{width:450px;}
+.fsplit .o{height:69px;border:1px solid var(--line);background:#fff;display:flex;align-items:center;padding:0 22px;font-size:14px;}
+.fsplit .o.on{border:1.5px solid var(--ink);font-weight:700;margin-bottom:12px;}
+.fsplit .o span{width:124px;font-size:11px;color:var(--gray-4);font-weight:600;letter-spacing:.08em;}
+.claim{margin-top:48px;border-top:1px solid var(--ink);padding-top:28px;font-size:20px;font-weight:700;line-height:1.8;}
+
+/* issue -> approach */
+.pairs{margin-top:48px;border-top:1px solid var(--ink);}
+.pair{display:flex;align-items:stretch;border-bottom:1px solid var(--line);padding:36px 0;}
+.pair .no{width:80px;font-size:34px;font-weight:700;line-height:1.2;}
+.pair .is{width:440px;padding-right:32px;}
+.pair .arr{width:80px;display:flex;align-items:center;justify-content:center;}
+.pair .ap{width:600px;background:var(--gray-1);padding:26px 30px;}
+.pair .lb{font-size:11px;color:var(--gray-4);font-weight:600;letter-spacing:.14em;margin-bottom:6px;}
+.pair p{font-size:14px;color:#444;line-height:1.9;margin-top:8px;}
+
+/* case */
+.case-hd{display:flex;align-items:flex-end;margin-bottom:40px;}
+.case-hd .t{width:760px;}
+.case-hd .m{width:440px;font-size:13px;color:#444;line-height:1.9;border-left:1px solid var(--line);padding-left:28px;}
+.case-main{display:flex;}
+.case-main .shot{width:560px;height:468px;margin-right:40px;}
+.ba{width:600px;border-top:1px solid var(--ink);}
+.ba .r{display:flex;border-bottom:1px solid var(--line);}
+.ba .r.h{font-size:11px;color:var(--gray-4);font-weight:600;letter-spacing:.14em;}
+.ba .c1{width:150px;padding:18px 0;font-size:13px;font-weight:700;}
+.ba .c2{width:190px;padding:18px 16px;font-size:13px;color:#555;}
+.ba .c3{width:260px;padding:18px 16px;font-size:14px;font-weight:700;background:var(--gray-1);}
+.ba .r.h .c1,.ba .r.h .c2,.ba .r.h .c3{padding:10px 16px;font-size:11px;font-weight:600;color:var(--gray-4);}
+.ba .r.h .c1{padding-left:0;}
+.voices{display:flex;gap:24px;margin-top:40px;}
+.voice{width:588px;border:1px solid var(--line);padding:30px 32px;display:flex;}
+.voice .p{width:88px;height:88px;border-radius:50%;margin-right:24px;font-size:10px;}
+.voice .b{width:410px;}
+.voice .q{font-size:17px;font-weight:700;line-height:1.8;}
+.voice .w{font-size:12px;color:var(--gray-4);margin-top:10px;}
+.more{display:flex;justify-content:center;margin-top:40px;}
+
+/* cards */
+.cards{display:flex;gap:24px;margin-top:48px;}
+.card{width:384px;border:1px solid var(--line);background:#fff;}
+.card .ci{height:180px;border:none;border-bottom:1px dashed var(--gray-3);}
+.card .cb{padding:24px 26px 28px;}
+.card .en{font-size:11px;letter-spacing:.14em;color:var(--gray-4);font-weight:600;}
+.card h3{margin:4px 0 8px;}
+.card p{font-size:13.5px;color:#444;line-height:1.9;}
+.cards4 .card{width:282px;}
+.cards4 .cb{padding:22px 22px 26px;}
+.inc{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;}
+
+/* recruit (sub) */
+.sub-in{display:flex;}
+.sub-in .l{width:540px;margin-right:60px;}
+.sub-in .r{width:600px;}
+.li{display:flex;border-bottom:1px solid var(--line);padding:20px 0;}
+.li:first-child{border-top:1px solid var(--ink);}
+.li .ic{width:44px;padding-top:2px;}
+.li .tx{width:556px;}
+.li b{font-size:16px;}
+.li p{font-size:13.5px;color:#444;line-height:1.9;margin-top:2px;}
+
+/* steps */
+.steps{display:flex;margin-top:48px;}
+.step{width:200px;border-top:1px solid var(--ink);padding:22px 20px 0 0;}
+.step .n{font-size:28px;font-weight:700;line-height:1.2;}
+.step b{display:block;font-size:15px;margin:8px 0 6px;}
+.step p{font-size:12.5px;color:#444;line-height:1.8;}
+
+/* price */
+.price{display:flex;margin-top:48px;border:1px solid var(--ink);background:#fff;}
+.price .l{width:480px;padding:44px 48px;border-right:1px solid var(--line);}
+.price .l .v{font-size:52px;font-weight:700;line-height:1.3;}
+.price .l .v small{font-size:20px;margin-left:4px;}
+.price .r{width:718px;padding:44px 48px;}
+.price .r h3{margin-bottom:12px;}
+.ck{display:flex;align-items:center;gap:10px;font-size:14px;padding:6px 0;}
+.cols{display:flex;}
+.cols .col{width:311px;}
+
+/* faq */
+.faq{margin-top:40px;border-top:1px solid var(--ink);}
+.qa{border-bottom:1px solid var(--line);padding:26px 0;display:flex;}
+.qa .q{width:440px;font-size:16px;font-weight:700;line-height:1.7;padding-right:40px;display:flex;}
+.qa .q span{width:36px;color:var(--gray-4);}
+.qa .q div{width:364px;}
+.qa .a{width:760px;font-size:14px;color:#444;line-height:2;}
+
+/* team */
+.team{display:flex;gap:24px;margin-top:40px;}
+.mem{width:588px;border:1px solid var(--line);padding:28px 30px;display:flex;background:#fff;}
+.mem .p{width:120px;height:150px;margin-right:26px;}
+.mem .b{width:380px;}
+.mem .role{font-size:11px;color:var(--gray-4);font-weight:600;letter-spacing:.1em;}
+.mem b{display:block;font-size:18px;margin:2px 0 8px;}
+.mem p{font-size:13px;color:#444;line-height:1.9;}
+
+/* contact */
+.ct{display:flex;}
+.ct .l{width:480px;margin-right:80px;}
+.ct .r{width:640px;background:#fff;border:1px solid var(--line);padding:40px 44px 44px;}
+.ct .pt{display:flex;gap:12px;font-size:14px;padding:10px 0;border-bottom:1px solid var(--line);}
+.fld{margin-bottom:18px;}
+.fld label{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;margin-bottom:6px;}
+.req{font-size:10px;background:var(--dark);color:#fff;padding:1px 6px;border-radius:2px;font-weight:600;}
+.opt{font-size:10px;background:var(--gray-2);padding:1px 6px;border-radius:2px;font-weight:600;}
+.inp{height:48px;border:1px solid var(--gray-3);border-radius:3px;display:flex;align-items:center;padding:0 14px;font-size:13px;color:var(--gray-4);}
+.inp.ta{height:110px;align-items:flex-start;padding-top:12px;}
+.half{display:flex;gap:16px;}
+.half .fld{width:267px;}
+.chks{display:flex;flex-wrap:wrap;gap:8px 20px;}
+.chk{display:flex;align-items:center;gap:8px;font-size:13px;}
+.chk i{width:16px;height:16px;border:1px solid var(--gray-4);border-radius:2px;display:block;}
+.ct .btn{width:552px;margin-top:8px;}
+
+
+/* data strip */
+.data{display:flex;margin-top:40px;border:1px solid var(--line);}
+.data .d{width:250px;padding:20px 24px;border-right:1px solid var(--line);}
+.data .d .k{font-size:11px;color:var(--gray-4);font-weight:600;line-height:1.6;}
+.data .d .v{font-size:30px;font-weight:700;line-height:1.4;}
+.data .d .v small{font-size:13px;margin-left:3px;}
+.data .d .s{font-size:11px;color:var(--gray-4);}
+.data .d.txt{width:448px;border-right:none;background:var(--gray-1);display:flex;align-items:center;}
+.data .d.txt p{font-size:13px;line-height:1.9;color:#333;}
+/* approach 2col */
+.aps{display:flex;gap:24px;margin-top:48px;}
+.apc{width:588px;background:#fff;border:1px solid var(--line);padding:36px 36px 16px;}
+.aph{display:flex;border-bottom:1px solid var(--ink);padding-bottom:24px;}
+.aph .no{width:72px;font-size:52px;font-weight:700;line-height:1.1;}
+.aph .lb{font-size:11px;color:var(--gray-4);font-weight:600;letter-spacing:.14em;}
+.aph h3{font-size:24px;}
+.aph .ds{font-size:13.5px;color:#444;margin-top:4px;width:440px;}
+.api{display:flex;padding:22px 0;border-bottom:1px solid var(--line);}
+.api .n{width:72px;font-size:14px;font-weight:700;color:var(--gray-4);padding-top:2px;}
+.api .t{width:442px;}
+.api b{font-size:16px;}
+.api p{font-size:13.5px;color:#444;line-height:1.9;margin-top:4px;}
+.api.plus{border-bottom:none;}
+.api.plus .t{border:1px dashed var(--gray-3);padding:12px 16px;width:442px;}
+.card .who{font-size:12px;color:var(--gray-4);margin-top:12px;border-top:1px solid var(--line);padding-top:10px;}
+/* footer */
+.ft{width:1440px;background:var(--dark);color:#fff;padding:48px 120px 36px;}
+.ft .top{display:flex;align-items:center;margin-bottom:28px;}
+.ft .nm{font-size:15px;font-weight:700;letter-spacing:.12em;width:400px;}
+.ft .nav{display:flex;gap:28px;width:800px;justify-content:flex-end;}
+.ft .nav a{font-size:13px;font-weight:600;}
+.ft .copy{font-size:11px;color:#bbb;border-top:1px solid #666;padding-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="hd">
+  <a class="logo" href="kaigo-lp-wf.html#top"><svg width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1a1a1a"/></svg><span class="wm">unou<small>介護施設のホームページ制作</small></span></a>
+  <nav>
+    <a href="kaigo-lp-wf.html#reason">考え方</a>
+    <a href="kaigo-lp-wf.html#approach">アプローチ</a>
+    <a href="kaigo-lp-wf.html#case">事例</a>
+    <a href="kaigo-lp-wf.html#whyus">選ばれる理由</a>
+    <a href="kaigo-lp-wf.html#service">できること</a>
+    <a href="kaigo-lp-wf.html#recruit">採用</a>
+    <a href="kaigo-lp-wf.html#price">料金</a>
+    <a href="kaigo-lp-wf.html#faq">よくある質問</a>
+  </nav>
+  <a class="hbtn" href="kaigo-lp-wf.html#contact">無料で相談する</a>
+</div>
+
+<section style="padding:56px 120px 64px;background:var(--gray-1);">
+  <p class="note" style="margin-bottom:24px;">TOP &nbsp;/&nbsp; 事例 &nbsp;/&nbsp; 寝屋川苑さま</p>
+  <p class="eyebrow">Case Study</p>
+  <h1 style="font-size:38px;">事例インタビュー：社会福祉法人 東和福祉会 寝屋川苑さま</h1>
+  <p class="lead" style="margin-top:20px;">このページは準備中です。別途制作中の事例インタビューページに差し替えます。</p>
+</section>
+<section>
+  <div class="ph" style="height:360px;">COMING SOON（事例インタビューページ）</div>
+  <div class="more"><a class="btn-line" href="kaigo-lp-wf.html#case" style="width:360px;">LPに戻る</a></div>
+</section>
+<section class="tint">
+  <div class="row" style="align-items:center;"><div style="width:840px;"><p class="eyebrow">Contact</p><h2 style="margin-bottom:0;">まずは、無料でご相談ください</h2></div><a class="btn" href="kaigo-lp-wf.html#contact">無料で相談する</a></div>
+</section>
+<div class="ft">
+  <div class="top">
+    <p class="nm">unou inc.</p>
+    <div class="nav"><a href="kaigo-lp-wf.html#case">事例</a><a href="kaigo-lp-wf.html#whyus">選ばれる理由</a><a href="kaigo-lp-wf.html#service">できること</a><a href="kaigo-lp-wf.html#recruit">採用</a><a href="kaigo-lp-wf.html#price">料金</a><a href="kaigo-lp-wf.html#faq">よくある質問</a><a href="kaigo-lp-wf.html#contact">無料で相談する</a></div>
+  </div>
+  <p class="copy">©2026 unou inc.　運営会社　プライバシーポリシー</p>
+</div>
+
+</body>
+</html>

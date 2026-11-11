@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>介護施設向け 入居相談が増えるホームページ制作 LP — WF</title>
+<style>
+:root{--ink:#1a1a1a;--gray-1:#f5f5f5;--gray-2:#e4e4e4;--gray-3:#c9c9c9;--gray-4:#8a8a8a;--line:#d0d0d0;--dark:#3a3a3a;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{width:1440px;min-width:1440px;}
+body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;color:var(--ink);background:#fff;line-height:1.8;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+section{background:#fff;border-bottom:1px solid var(--line);width:1440px;padding:88px 120px;}
+section.tint{background:var(--gray-1);}
+.row{display:flex;}
+.eyebrow{font-size:12px;letter-spacing:.2em;color:var(--gray-4);text-transform:uppercase;margin-bottom:16px;font-weight:600;}
+h1{font-size:50px;line-height:1.45;letter-spacing:.02em;font-weight:700;}
+h2{font-size:30px;line-height:1.6;letter-spacing:.02em;font-weight:700;margin-bottom:16px;}
+h3{font-size:18px;font-weight:700;line-height:1.6;}
+.lead{font-size:16px;color:#333;line-height:2;width:800px;}
+.center{text-align:center;}
+.center .lead{margin:0 auto;}
+.ph{background:var(--gray-1);border:1px dashed var(--gray-3);display:flex;align-items:center;justify-content:center;color:var(--gray-4);font-size:12px;letter-spacing:.1em;}
+.tint .ph{background:#fff;}
+.btn{display:flex;align-items:center;justify-content:center;gap:12px;background:var(--dark);color:#fff;font-size:16px;font-weight:700;height:64px;width:360px;border-radius:3px;letter-spacing:.04em;}
+.btn-line{display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;border:1px solid var(--ink);font-size:15px;font-weight:700;height:64px;width:280px;border-radius:3px;}
+.note{font-size:12px;color:var(--gray-4);line-height:1.8;}
+
+/* header */
+.hd{width:1440px;height:80px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 40px;}
+.hd .logo{display:flex;align-items:center;gap:10px;width:300px;}
+.hd .wm{font-size:14px;font-weight:700;letter-spacing:.12em;line-height:1.3;}
+.hd .wm small{display:block;font-size:9px;font-weight:600;letter-spacing:.1em;color:var(--gray-4);}
+.hd nav{display:flex;gap:30px;flex:1;justify-content:flex-end;margin-right:32px;}
+.hd nav a{font-size:13.5px;font-weight:600;letter-spacing:.04em;}
+.hd .hbtn{background:var(--dark);color:#fff;font-size:13px;font-weight:700;height:44px;width:220px;display:flex;align-items:center;justify-content:center;border-radius:3px;}
+
+/* fv */
+.fv{padding:80px 120px 72px;background:var(--gray-1);}
+.fv .l{width:640px;margin-right:60px;}
+.fv .r{width:500px;}
+.fv .tag{display:flex;gap:8px;margin-bottom:24px;}
+.chip{background:var(--gray-2);font-size:12px;font-weight:600;padding:4px 12px;border-radius:2px;}
+.fv .sub{font-size:17px;line-height:2;color:#333;margin:24px 0 36px;}
+.fv .kv{width:500px;height:420px;background:#fff;}
+.fv .cta{display:flex;gap:16px;align-items:center;}
+.stats{display:flex;gap:20px;margin-top:64px;}
+.stat{width:386px;background:#fff;border:1px solid var(--line);padding:28px 28px 26px;}
+.stat .k{font-size:12px;color:var(--gray-4);font-weight:600;letter-spacing:.06em;}
+.stat .v{font-size:44px;font-weight:700;line-height:1.3;margin:4px 0 6px;}
+.stat .v small{font-size:18px;margin-left:4px;}
+.stat .d{font-size:13px;color:#444;line-height:1.8;}
+
+/* flow diagram */
+.flow{display:flex;align-items:center;margin-top:48px;}
+.fbox{width:270px;height:150px;border:1px solid var(--ink);background:#fff;padding:22px 22px;}
+.fbox .n{font-size:11px;color:var(--gray-4);font-weight:600;letter-spacing:.14em;}
+.fbox b{display:block;font-size:17px;margin:4px 0 6px;}
+.fbox p{font-size:13px;color:#444;line-height:1.7;}
+.farr{width:60px;display:flex;justify-content:center;}
+.fsplit{width:450px;}
+.fsplit .o{height:69px;border:1px solid var(--line);background:#fff;display:flex;align-items:center;padding:0 22px;font-size:14px;}
+.fsplit .o.on{border:1.5px solid var(--ink);font-weight:700;margin-bottom:12px;}
+.fsplit .o span{width:124px;font-size:11px;color:var(--gray-4);font-weight:600;letter-spacing:.08em;}
+.claim{margin-top:48px;border-top:1px solid var(--ink);padding-top:28px;font-size:20px;font-weight:700;line-height:1.8;}
+
+/* issue -> approach */
+.pairs{margin-top:48px;border-top:1px solid var(--ink);}
+.pair{display:flex;align-items:stretch;border-bottom:1px solid var(--line);padding:36px 0;}
+.pair .no{width:80px;font-size:34px;font-weight:700;line-height:1.2;}
+.pair .is{width:440px;padding-right:32px;}
+.pair .arr{width:80px;display:flex;align-items:center;justify-content:center;}
+.pair .ap{width:600px;background:var(--gray-1);padding:26px 30px;}
+.pair .lb{font-size:11px;color:var(--gray-4);font-weight:600;letter-spacing:.14em;margin-bottom:6px;}
+.pair p{font-size:14px;color:#444;line-height:1.9;margin-top:8px;}
+
+/* case */
+.case-hd{display:flex;align-items:flex-end;margin-bottom:40px;}
+.case-hd .t{width:760px;}
+.case-hd .m{width:440px;font-size:13px;color:#444;line-height:1.9;border-left:1px solid var(--line);padding-left:28px;}
+.case-main{display:flex;}
+.case-main .shot{width:560px;height:468px;margin-right:40px;}
+.ba{width:600px;border-top:1px solid var(--ink);}
+.ba .r{display:flex;border-bottom:1px solid var(--line);}
+.ba .r.h{font-size:11px;color:var(--gray-4);font-weight:600;letter-spacing:.14em;}
+.ba .c1{width:150px;padding:18px 0;font-size:13px;font-weight:700;}
+.ba .c2{width:190px;padding:18px 16px;font-size:13px;color:#555;}
+.ba .c3{width:260px;padding:18px 16px;font-size:14px;font-weight:700;background:var(--gray-1);}
+.ba .r.h .c1,.ba .r.h .c2,.ba .r.h .c3{padding:10px 16px;font-size:11px;font-weight:600;color:var(--gray-4);}
+.ba .r.h .c1{padding-left:0;}
+.voices{display:flex;gap:24px;margin-top:40px;}
+.voice{width:588px;border:1px solid var(--line);padding:30px 32px;display:flex;}
+.voice .p{width:88px;height:88px;border-radius:50%;margin-right:24px;font-size:10px;}
+.voice .b{width:410px;}
+.voice .q{font-size:17px;font-weight:700;line-height:1.8;}
+.voice .w{font-size:12px;color:var(--gray-4);margin-top:10px;}
+.more{display:flex;justify-content:center;margin-top:40px;}
+
+/* cards */
+.cards{display:flex;gap:24px;margin-top:48px;}
+.card{width:384px;border:1px solid var(--line);background:#fff;}
+.card .ci{height:180px;border:none;border-bottom:1px dashed var(--gray-3);}
+.card .cb{padding:24px 26px 28px;}
+.card .en{font-size:11px;letter-spacing:.14em;color:var(--gray-4);font-weight:600;}
+.card h3{margin:4px 0 8px;}
+.card p{font-size:13.5px;color:#444;line-height:1.9;}
+.cards4 .card{width:282px;}
+.cards4 .cb{padding:22px 22px 26px;}
+.inc{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;}
+
+/* recruit (sub) */
+.sub-in{display:flex;}
+.sub-in .l{width:540px;margin-right:60px;}
+.sub-in .r{width:600px;}
+.li{display:flex;border-bottom:1px solid var(--line);padding:20px 0;}
+.li:first-child{border-top:1px solid var(--ink);}
+.li .ic{width:44px;padding-top:2px;}
+.li .tx{width:556px;}
+.li b{font-size:16px;}
+.li p{font-size:13.5px;color:#444;line-height:1.9;margin-top:2px;}
+
+/* steps */
+.steps{display:flex;margin-top:48px;}
+.step{width:200px;border-top:1px solid var(--ink);padding:22px 20px 0 0;}
+.step .n{font-size:28px;font-weight:700;line-height:1.2;}
+.step b{display:block;font-size:15px;margin:8px 0 6px;}
+.step p{font-size:12.5px;color:#444;line-height:1.8;}
+
+/* price */
+.price{display:flex;margin-top:48px;border:1px solid var(--ink);background:#fff;}
+.price .l{width:480px;padding:44px 48px;border-right:1px solid var(--line);}
+.price .l .v{font-size:52px;font-weight:700;line-height:1.3;}
+.price .l .v small{font-size:20px;margin-left:4px;}
+.price .r{width:718px;padding:44px 48px;}
+.price .r h3{margin-bottom:12px;}
+.ck{display:flex;align-items:center;gap:10px;font-size:14px;padding:6px 0;}
+.cols{display:flex;}
+.cols .col{width:311px;}
+
+/* faq */
+.faq{margin-top:40px;border-top:1px solid var(--ink);}
+.qa{border-bottom:1px solid var(--line);padding:26px 0;display:flex;}
+.qa .q{width:440px;font-size:16px;font-weight:700;line-height:1.7;padding-right:40px;display:flex;}
+.qa .q span{width:36px;color:var(--gray-4);}
+.qa .q div{width:364px;}
+.qa .a{width:760px;font-size:14px;color:#444;line-height:2;}
+
+/* team */
+.team{display:flex;gap:24px;margin-top:40px;}
+.mem{width:588px;border:1px solid var(--line);padding:28px 30px;display:flex;background:#fff;}
+.mem .p{width:120px;height:150px;margin-right:26px;}
+.mem .b{width:380px;}
+.mem .role{font-size:11px;color:var(--gray-4);font-weight:600;letter-spacing:.1em;}
+.mem b{display:block;font-size:18px;margin:2px 0 8px;}
+.mem p{font-size:13px;color:#444;line-height:1.9;}
+
+/* contact */
+.ct{display:flex;}
+.ct .l{width:480px;margin-right:80px;}
+.ct .r{width:640px;background:#fff;border:1px solid var(--line);padding:40px 44px 44px;}
+.ct .pt{display:flex;gap:12px;font-size:14px;padding:10px 0;border-bottom:1px solid var(--line);}
+.fld{margin-bottom:18px;}
+.fld label{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;margin-bottom:6px;}
+.req{font-size:10px;background:var(--dark);color:#fff;padding:1px 6px;border-radius:2px;font-weight:600;}
+.opt{font-size:10px;background:var(--gray-2);padding:1px 6px;border-radius:2px;font-weight:600;}
+.inp{height:48px;border:1px solid var(--gray-3);border-radius:3px;display:flex;align-items:center;padding:0 14px;font-size:13px;color:var(--gray-4);}
+.inp.ta{height:110px;align-items:flex-start;padding-top:12px;}
+.half{display:flex;gap:16px;}
+.half .fld{width:267px;}
+.chks{display:flex;flex-wrap:wrap;gap:8px 20px;}
+.chk{display:flex;align-items:center;gap:8px;font-size:13px;}
+.chk i{width:16px;height:16px;border:1px solid var(--gray-4);border-radius:2px;display:block;}
+.ct .btn{width:552px;margin-top:8px;}
+
+
+/* data strip */
+.data{display:flex;margin-top:40px;border:1px solid var(--line);}
+.data .d{width:250px;padding:20px 24px;border-right:1px solid var(--line);}
+.data .d .k{font-size:11px;color:var(--gray-4);font-weight:600;line-height:1.6;}
+.data .d .v{font-size:30px;font-weight:700;line-height:1.4;}
+.data .d .v small{font-size:13px;margin-left:3px;}
+.data .d .s{font-size:11px;color:var(--gray-4);}
+.data .d.txt{width:448px;border-right:none;background:var(--gray-1);display:flex;align-items:center;}
+.data .d.txt p{font-size:13px;line-height:1.9;color:#333;}
+/* approach 2col */
+.aps{display:flex;gap:24px;margin-top:48px;}
+.apc{width:588px;background:#fff;border:1px solid var(--line);padding:36px 36px 16px;}
+.aph{display:flex;border-bottom:1px solid var(--ink);padding-bottom:24px;}
+.aph .no{width:72px;font-size:52px;font-weight:700;line-height:1.1;}
+.aph .lb{font-size:11px;color:var(--gray-4);font-weight:600;letter-spacing:.14em;}
+.aph h3{font-size:24px;}
+.aph .ds{font-size:13.5px;color:#444;margin-top:4px;width:440px;}
+.api{display:flex;padding:22px 0;border-bottom:1px solid var(--line);}
+.api .n{width:72px;font-size:14px;font-weight:700;color:var(--gray-4);padding-top:2px;}
+.api .t{width:442px;}
+.api b{font-size:16px;}
+.api p{font-size:13.5px;color:#444;line-height:1.9;margin-top:4px;}
+.api.plus{border-bottom:none;}
+.api.plus .t{border:1px dashed var(--gray-3);padding:12px 16px;width:442px;}
+.card .who{font-size:12px;color:var(--gray-4);margin-top:12px;border-top:1px solid var(--line);padding-top:10px;}
+.rs{display:flex;align-items:stretch;margin-top:40px;}
+.r1{width:360px;border:1px solid var(--line);padding:28px 28px 30px;}
+.r1.on{border:1.5px solid var(--ink);background:var(--gray-1);}
+.r1 .n{font-size:28px;font-weight:700;line-height:1.2;margin-bottom:10px;}
+.r1 p{font-size:13.5px;color:#444;line-height:1.9;margin-top:10px;}
+.r1 p.n{font-size:28px;color:var(--ink);margin-top:0;line-height:1.2;}
+.ra{width:60px;display:flex;align-items:center;justify-content:center;}
+.fcap{font-size:12px;color:var(--gray-4);font-weight:600;letter-spacing:.08em;margin-top:56px;}
+.optn{margin-top:24px;border-top:1px solid var(--line);padding-top:20px;}
+/* footer */
+.ft{width:1440px;background:var(--dark);color:#fff;padding:48px 120px 36px;}
+.ft .top{display:flex;align-items:center;margin-bottom:28px;}
+.ft .nm{font-size:15px;font-weight:700;letter-spacing:.12em;width:400px;}
+.ft .nav{display:flex;gap:28px;width:800px;justify-content:flex-end;}
+.ft .nav a{font-size:13px;font-weight:600;}
+.ft .copy{font-size:11px;color:#bbb;border-top:1px solid #666;padding-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="hd">
+  <a class="logo" href="#top"><svg width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1a1a1a"/></svg><span class="wm">unou<small>介護施設のホームページ制作</small></span></a>
+  <nav>
+    <a href="#reason">考え方</a>
+    <a href="#approach">アプローチ</a>
+    <a href="#case">事例</a>
+    <a href="#whyus">選ばれる理由</a>
+    <a href="#service">できること</a>
+    <a href="#recruit">採用</a>
+    <a href="#price">料金</a>
+    <a href="#faq">よくある質問</a>
+  </nav>
+  <a class="hbtn" href="#contact">無料で相談する</a>
+</div>
+
+<section class="fv" id="top">
+  <div class="row">
+    <div class="l">
+      <div class="tag"><span class="chip">特養</span><span class="chip">有料老人ホーム</span><span class="chip">サ高住</span><span class="chip">デイサービス</span></div>
+      <h1>ホームページから届く<br>入居のご相談を、<br>増やします。</h1>
+      <p class="sub">施設を探しているご家族は、すでにホームページを見ています。<br>見に来た人に「ここに相談したい」と思ってもらえるサイトへ、<br>つくり直します。</p>
+      <div class="cta">
+        <a class="btn" href="#contact">無料で相談する<svg width="18" height="12" viewBox="0 0 18 12"><path d="M0 6h16M11 1l5 5-5 5" stroke="#fff" stroke-width="1.5" fill="none"/></svg></a>
+        <a class="btn-line" href="#case">事例を見る</a>
+      </div>
+    </div>
+    <div class="r"><div class="ph kv">PHOTO（施設の日常・スタッフと入居者さま）</div></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><p class="k">ホームページ経由のお問い合わせ</p><p class="v">約20<small>倍</small></p><p class="d">年に5件ほど → 公開後2〜3週間で1年分に（ダミー・表現は先方確認）</p></div>
+    <div class="stat"><p class="k">入所申し込みの経路</p><p class="v">約半分<small>がHP経由</small></p><p class="d">以前は紹介・老健・病院からがほとんど</p></div>
+    <div class="stat"><p class="k">見学・入所相談</p><p class="v">毎週末<small>が予約で埋まる</small></p><p class="d">「ホームページを見て来ました」という方が多数</p></div>
+  </div>
+  <p class="note" style="margin-top:14px;">※ 社会福祉法人 東和福祉会 寝屋川苑さまの事例（リニューアル後のヒアリングによる）</p>
+</section>
+
+<section id="reason">
+  <div class="center">
+    <p class="eyebrow">Reason</p>
+    <h2>入居を希望する方が減るなかで、<br>選ばれる施設には、申し込みが集まっています。</h2>
+  </div>
+  <div class="rs">
+    <div class="r1"><p class="n">01</p><h3>入居希望者の数は、<br>減少しています</h3><p>施設の数が増え、在宅サービスも充実。待っていれば申し込みが来る状況では、なくなってきています。</p></div>
+    <div class="ra"><svg width="28" height="12" viewBox="0 0 28 12"><path d="M0 6h26M21 1l5 5-5 5" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg></div>
+    <div class="r1"><p class="n">02</p><h3>ただ、人気の施設には<br>申し込みが集まっています</h3><p>ご家族は複数の施設を見比べて選びます。「ここに任せたい」と思われる施設に、相談と申し込みが集中します。</p></div>
+    <div class="ra"><svg width="28" height="12" viewBox="0 0 28 12"><path d="M0 6h26M21 1l5 5-5 5" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg></div>
+    <div class="r1 on"><p class="n">03</p><h3>選ばれる施設になるには、<br>ホームページが重要です</h3><p>施設を探すご家族は、まずホームページを見て、相談するかどうかを決めています。</p></div>
+  </div>
+  <p class="fcap">ご家族が施設を選ぶまでの流れ</p>
+  <div class="flow" style="margin-top:16px;">
+    <div class="fbox"><p class="n">STEP 1</p><b>地域で施設を探す</b><p>「◯◯市 特養」「◯◯市 老人ホーム」などで検索する</p></div>
+    <div class="farr"><svg width="28" height="12" viewBox="0 0 28 12"><path d="M0 6h26M21 1l5 5-5 5" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg></div>
+    <div class="fbox"><p class="n">STEP 2</p><b>ホームページを見る</b><p>雰囲気・費用・暮らしの様子を、スマホで確かめる</p></div>
+    <div class="farr"><svg width="28" height="12" viewBox="0 0 28 12"><path d="M0 6h26M21 1l5 5-5 5" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg></div>
+    <div class="fsplit">
+      <div class="o on"><span>伝わるサイト</span>「ここなら」と思い、見学・相談へ進む</div>
+      <div class="o"><span>伝わらないサイト</span>相談しないまま、ほかの施設を探す</div>
+    </div>
+    <div class="farr"><svg width="28" height="12" viewBox="0 0 28 12"><path d="M0 6h26M21 1l5 5-5 5" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg></div>
+    <div class="fbox" style="width:90px;padding:22px 12px;display:flex;align-items:center;justify-content:center;"><b style="font-size:15px;margin:0;">入居<br>申込</b></div>
+  </div>
+  <p class="claim center">見に来たご家族に「ここなら」と思ってもらえるホームページを、つくります。</p>
+</section>
+
+<section class="tint" id="approach">
+  <p class="eyebrow">Approach</p>
+  <h2>ご相談が増えるホームページに変える、2つのアプローチ</h2>
+  <p class="lead">まず、相談につながる土台を整える。そのうえで、ほかの施設にはない魅力を見える形にします。</p>
+  <div class="aps">
+    <div class="apc">
+      <div class="aph"><p class="no">1</p><div><p class="lb">FOUNDATION</p><h3>基盤整備</h3><p class="ds">見に来たご家族が、迷わず相談まで進める状態をつくります。</p></div></div>
+      <div class="api"><div class="n">01</div><div class="t"><b>ご家族が知りたい順に、情報を掲載</b><p>入居の申し込みや意思決定に必要な情報（特長・費用・1日の流れ・入居までの流れ）を、知りたい順に整理します。</p></div></div>
+      <div class="api"><div class="n">02</div><div class="t"><b>スマホでの見やすさを高める</b><p>施設探しの多くはスマホから。文字の大きさ、写真、ボタンの位置まで、スマホで読みやすく設計します。</p></div></div>
+      <div class="api"><div class="n">03</div><div class="t"><b>相談の入り口を複数つくる</b><p>電話・メール・見学予約。ご家族が自分に合った方法を選べるようにし、最初の一歩を軽くします。</p></div></div>
+    </div>
+    <div class="apc">
+      <div class="aph"><p class="no">2</p><div><p class="lb">DIFFERENTIATION</p><h3>差別化設計</h3><p class="ds">「ここに任せたい」と思ってもらえる、その施設だけの理由をつくります。</p></div></div>
+      <div class="api"><div class="n">01</div><div class="t"><b>独自性の発見</b><p>取材を通じて、理念やケアの考え方、職員の方の想いから、その施設ならではの強みを見つけ、言葉にします。</p></div></div>
+      <div class="api"><div class="n">02</div><div class="t"><b>デザイン（ビジュアル化）</b><p>見つけた強みを、写真・色・レイアウトで表現。ひと目で「この施設らしさ」が伝わるデザインにします。</p></div></div>
+      <div class="api"><div class="n">03</div><div class="t"><b>SNSとの連携</b><p>Instagramなどの投稿をサイト上に表示。施設の雰囲気や、ふだんの様子が「いま」の状態で伝わります。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="case">
+  <div class="case-hd">
+    <div class="t">
+      <p class="eyebrow">Case Study</p>
+      <h2 style="margin-bottom:0;">年に5件ほどだったお問い合わせが、<br>公開後2〜3週間で、1年分に。</h2>
+    </div>
+    <div class="m"><b>社会福祉法人 東和福祉会 寝屋川苑さま</b><br>大阪府／特別養護老人ホーム・デイサービス ほか<br>支援内容：コーポレートサイトリニューアル、パンフレット制作</div>
+  </div>
+  <div class="case-main">
+    <div class="ph shot">IMAGE（リニューアル後のサイト PC＋スマホ）</div>
+    <div class="ba">
+      <div class="r h"><div class="c1"></div><div class="c2">BEFORE</div><div class="c3">AFTER</div></div>
+      <div class="r"><div class="c1">HP経由の<br>お問い合わせ</div><div class="c2">年に5件ほど</div><div class="c3">2〜3週間で1年分。<br>すでに数十件に対応</div></div>
+      <div class="r"><div class="c1">入所申し込みの<br>経路</div><div class="c2">紹介・老健・病院がほとんど</div><div class="c3">約半分が<br>ホームページ経由に</div></div>
+      <div class="r"><div class="c1">見学・入所相談</div><div class="c2">—（ダミー）</div><div class="c3">毎週末、見学と入所相談で<br>予定が埋まる</div></div>
+      <div class="r"><div class="c1">サイトの更新</div><div class="c2">触れる職員は1人だけ</div><div class="c3">各部署が自分たちで更新。<br>お知らせは約5分で投稿</div></div>
+    </div>
+  </div>
+  <div class="voices">
+    <div class="voice"><div class="ph p">PHOTO</div><div class="b"><p class="q">「びっくりしています。ホームページって、こんなに大切なんやと。」</p><p class="w">ケアマイスター 那須さま（掲載可否・表記は要確認）</p></div></div>
+    <div class="voice"><div class="ph p">PHOTO</div><div class="b"><p class="q">「見る人がどう感じるかで、こんなに変わるんだと実感しました。」</p><p class="w">辻井さま（役職・掲載可否は要確認）</p></div></div>
+  </div>
+  <div class="more"><a class="btn-line" href="case-neyagawaen-wf.html" style="width:360px;">事例インタビューを詳しく見る<svg width="18" height="12" viewBox="0 0 18 12"><path d="M0 6h16M11 1l5 5-5 5" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg></a></div>
+</section>
+
+<section class="tint" id="whyus">
+  <div class="center">
+    <p class="eyebrow">Why us</p>
+    <h2>unouが選ばれる理由</h2>
+    <p class="lead">戦略・クリエイティブ・介護の現場理解。3つの専門性を、ひとつのチームで提供します。</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="ph ci">PHOTO（メンバー）</div><div class="cb"><p class="en">REASON 01</p><h3>採用戦略と実行支援の<br>プロフェッショナル</h3><p>大手人材会社出身のメンバーが在籍。戦略設計から求人媒体の運用、採用代行まで、採用を成果につなげます。（ダミー・経歴表記は要確認）</p><p class="who">担当：（メンバー名・ダミー）</p></div></div>
+    <div class="card"><div class="ph ci">PHOTO（メンバー・制作物）</div><div class="cb"><p class="en">REASON 02</p><h3>日本トップクラスの<br>クリエイティブチーム</h3><p>ブランディングとサイト制作を手がけてきたディレクター・デザイナーが、施設の魅力を伝わる形にします。（ダミー・根拠となる実績を掲載）</p><p class="who">担当：（メンバー名・ダミー）</p></div></div>
+    <div class="card"><div class="ph ci">PHOTO（取材風景）</div><div class="cb"><p class="en">REASON 03</p><h3>介護施設支援の実績と、<br>現場の理解</h3><p>施設に伺い、1日ご一緒して取材します。専門用語を使わず、ホームページに詳しくない方にも噛み砕いてご説明します。</p><p class="who">担当：西坂 優志 ほか（ダミー）</p></div></div>
+  </div>
+</section>
+<section id="service">
+  <div class="center">
+    <p class="eyebrow">Service</p>
+    <h2>設計から公開後の運用まで、まとめて担当します</h2>
+    <p class="lead">ホームページに詳しい職員の方がいなくても進められるよう、噛み砕いてご説明しながら伴走します。</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="ph ci">IMAGE</div><div class="cb"><p class="en">01 — PLANNING</p><h3>ご家族目線の構成設計</h3><p>誰に、何を、どの順番で伝えるか。施設の強みと、ご家族が知りたいことを整理し、ページ構成に落とし込みます。</p></div></div>
+    <div class="card"><div class="ph ci">IMAGE</div><div class="cb"><p class="en">02 — INTERVIEW &amp; PHOTO</p><h3>現地での取材・撮影</h3><p>施設に伺い、1日ご一緒して取材します（撮影はオプション）。暮らしの様子や職員の方の表情など、その施設らしさを写真と言葉にします。</p></div></div>
+    <div class="card"><div class="ph ci">IMAGE</div><div class="cb"><p class="en">03 — DESIGN &amp; BUILD</p><h3>デザイン・実装</h3><p>スマホで見やすく、相談しやすいサイトに。SNS連携、複数の相談窓口、お知らせ機能まで実装します。</p></div></div>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="ph ci">IMAGE</div><div class="cb"><p class="en">04 — OPERATION</p><h3>自分たちで更新できる仕組み</h3><p>各部署の方が管理画面から更新できるように設計。お知らせやイベントの告知を、数分で投稿できます。</p></div></div>
+    <div class="card"><div class="ph ci">IMAGE</div><div class="cb"><p class="en">05 — SUPPORT</p><h3>公開後のサポート</h3><p>更新方法のレクチャー、バックアップ、追加したいページのご相談まで。公開して終わりにしません。</p></div></div>
+    <div class="card"><div class="ph ci">IMAGE</div><div class="cb"><p class="en">06 — PRINT</p><h3>パンフレットなどの制作</h3><p>見学時にお渡しする施設パンフレットも、サイトと同じ写真・言葉でそろえて制作します。</p></div></div>
+  </div>
+</section>
+
+<section class="tint" id="operation">
+  <p class="eyebrow">After Launch</p>
+  <h2>公開後、施設の中でも使われるホームページに</h2>
+  <p class="lead">寝屋川苑さまでは、ホームページがご家族への連絡や、職員同士の情報共有にも使われています。</p>
+  <div class="cards cards4">
+    <div class="card"><div class="cb"><p class="en">POINT 1</p><h3>各部署が、自分で更新</h3><p>以前は1人しか触れなかったサイトを、いまは各部署が責任を持って更新しています。</p></div></div>
+    <div class="card"><div class="cb"><p class="en">POINT 2</p><h3>お知らせは約5分で</h3><p>感染症の注意喚起なども、作ってすぐ投稿。紙で一人ずつ配る手間がなくなりました。</p></div></div>
+    <div class="card"><div class="cb"><p class="en">POINT 3</p><h3>SNSにも同じ内容を</h3><p>お知らせとSNSをセットで発信。届く範囲が広がり、運用の負担は減りました。</p></div></div>
+    <div class="card"><div class="cb"><p class="en">POINT 4</p><h3>入口のモニターにも表示</h3><p>玄関の大型モニターにサイトを常時表示。ご家族や職員が自由に見ています。</p></div></div>
+  </div>
+</section>
+
+<section id="recruit">
+  <div class="sub-in">
+    <div class="l">
+      <p class="eyebrow">Recruit</p>
+      <h2>採用にも、<br>同じホームページが効きます</h2>
+      <p class="lead" style="width:520px;">求人を見た人も、応募の前にホームページを確かめます。入居のご相談を増やす土台は、そのまま「ここで働きたい」と思ってもらう土台になります。</p>
+      <p class="note" style="margin-top:20px;">採用のご支援は、ホームページ制作とあわせても、単独でもご相談いただけます。</p>
+    </div>
+    <div class="r">
+      <div class="li"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" fill="none" stroke="#1a1a1a" stroke-width="1.5"/></svg></div><div class="tx"><b>採用ページの制作</b><p>職員の声、1日の流れ、手当や制度をわかりやすく掲載。興味を持った人が、スマホで職場を理解できる状態にします。</p></div></div>
+      <div class="li"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" fill="none" stroke="#1a1a1a" stroke-width="1.5"/></svg></div><div class="tx"><b>求人媒体の運用</b><p>紹介会社だけに頼らず、求人媒体で応募を集める方法をご提案・運用します。</p></div></div>
+      <div class="li"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" fill="none" stroke="#1a1a1a" stroke-width="1.5"/></svg></div><div class="tx"><b>採用業務の代行</b><p>応募対応や日程調整など、現場の負担になりやすい採用業務を代行します。（ダミー・提供範囲は要確認）</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tint" id="flow">
+  <p class="eyebrow">Flow</p>
+  <h2>公開までの進め方</h2>
+  <p class="lead">窓口の方のご負担が大きくならないよう、各ステップで必要なことを先にお伝えします。期間の目安は◯か月です。（ダミー）</p>
+  <div class="steps">
+    <div class="step"><p class="n">01</p><b>無料相談・ヒアリング</b><p>現状とお困りごとを伺い、進め方をご提案します。</p></div>
+    <div class="step"><p class="n">02</p><b>構成のご提案</b><p>ページ構成と、掲載する内容を設計します。</p></div>
+    <div class="step"><p class="n">03</p><b>取材（＋撮影）</b><p>施設に伺い、取材を行います。撮影はオプションです。</p></div>
+    <div class="step"><p class="n">04</p><b>デザイン</b><p>画面のデザインを作成し、ご確認いただきます。</p></div>
+    <div class="step"><p class="n">05</p><b>実装・公開</b><p>動作を確認し、公開します。</p></div>
+    <div class="step"><p class="n">06</p><b>更新レクチャー</b><p>更新方法をお伝えし、公開後もサポートします。</p></div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="center">
+    <p class="eyebrow">Price</p>
+    <h2>料金の目安</h2>
+  </div>
+  <div class="price">
+    <div class="l">
+      <p class="note">ホームページリニューアル一式</p>
+      <p class="v">80<small>万円〜（税別）</small></p>
+      <p class="note" style="margin-top:12px;">ページ数や内容により変わります。無料相談のあと、お見積もりをお出しします。</p>
+    </div>
+    <div class="r">
+      <h3>含まれるもの</h3>
+      <div class="cols">
+        <div class="col">
+          <div class="ck"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8l4 4 8-9" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg>構成設計</div>
+          <div class="ck"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8l4 4 8-9" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg>取材・原稿作成</div>
+          <div class="ck"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8l4 4 8-9" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg>デザイン（PC・スマホ）</div>
+          <div class="ck"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8l4 4 8-9" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg>実装・公開作業</div>
+        </div>
+        <div class="col">
+          <div class="ck"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8l4 4 8-9" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg>SNS連携</div>
+          <div class="ck"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8l4 4 8-9" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg>お問い合わせフォーム</div>
+          <div class="ck"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8l4 4 8-9" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg>更新レクチャー</div>
+        </div>
+      </div>
+      <div class="optn"><h3>オプション</h3><div class="ck"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v12M2 8h12" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg>撮影（施設・スタッフ・入居者さまの写真撮影）<span class="note" style="margin-left:8px;">別途お見積もり</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tint" id="faq">
+  <p class="eyebrow">FAQ</p>
+  <h2>よくあるご質問</h2>
+  <div class="faq">
+    <div class="qa"><div class="q"><span>Q</span><div>いまは満床です。それでも意味はありますか？</div></div><div class="a">あります。空きが出たときにすぐご案内できるよう、申し込みをお預かりしておけることが、安定した運営につながります。事例の施設さまも満床の状態でリニューアルされました。</div></div>
+    <div class="qa"><div class="q"><span>Q</span><div>ホームページに詳しい職員がいません。</div></div><div class="a">問題ありません。専門用語を使わずにご説明し、判断が必要な点はこちらで選択肢を整理してお持ちします。</div></div>
+    <div class="qa"><div class="q"><span>Q</span><div>公開後、自分たちで更新できますか？</div></div><div class="a">できます。お知らせやイベントの告知は、管理画面から数分で投稿できる仕組みにします。更新方法のレクチャーも行います。</div></div>
+    <div class="qa"><div class="q"><span>Q</span><div>使える写真がほとんどありません。</div></div><div class="a">オプションで、施設に伺って撮影します。入居者さまの写り込みや掲載の可否についても、事前にご相談しながら進めます。</div></div>
+    <div class="qa"><div class="q"><span>Q</span><div>対応エリアを教えてください。</div></div><div class="a">全国対応です。打ち合わせはオンライン、取材・撮影は現地に伺います。（ダミー・要確認）</div></div>
+    <div class="qa"><div class="q"><span>Q</span><div>採用だけの相談もできますか？</div></div><div class="a">できます。採用ページの制作、求人媒体の運用など、状況に合わせてご提案します。</div></div>
+  </div>
+</section>
+
+
+<section id="contact">
+  <div class="ct">
+    <div class="l">
+      <p class="eyebrow">Contact</p>
+      <h2>まずは、無料でご相談ください</h2>
+      <p class="lead" style="width:480px;">入居のご相談を増やしたい、ホームページが古いまま、採用も気になっている。まとまっていない段階でも、お気軽にお問い合わせください。</p>
+      <div style="margin-top:28px;border-top:1px solid var(--ink);">
+        <div class="pt"><svg width="16" height="24" viewBox="0 0 16 24"><path d="M2 12l4 4 8-9" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg>ご相談は無料です</div>
+        <div class="pt"><svg width="16" height="24" viewBox="0 0 16 24"><path d="M2 12l4 4 8-9" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg>オンラインで30分ほど（ダミー）</div>
+        <div class="pt"><svg width="16" height="24" viewBox="0 0 16 24"><path d="M2 12l4 4 8-9" stroke="#1a1a1a" stroke-width="1.5" fill="none"/></svg>◯営業日以内にご連絡します（ダミー）</div>
+      </div>
+    </div>
+    <div class="r">
+      <div class="fld"><label>法人名・施設名<span class="req">必須</span></label><div class="inp">例）社会福祉法人◯◯会 ◯◯苑</div></div>
+      <div class="fld"><label>お名前<span class="req">必須</span></label><div class="inp">例）山田 太郎</div></div>
+      <div class="half">
+        <div class="fld"><label>メールアドレス<span class="req">必須</span></label><div class="inp">example@example.jp</div></div>
+        <div class="fld"><label>電話番号<span class="opt">任意</span></label><div class="inp">000-0000-0000</div></div>
+      </div>
+      <div class="fld"><label>ご質問など<span class="opt">任意</span></label><div class="inp ta">ご自由にお書きください</div></div>
+      <a class="btn" href="#contact">無料で相談する</a>
+      <p class="note center" style="margin-top:12px;">プライバシーポリシーに同意のうえ、送信してください。</p>
+    </div>
+  </div>
+</section>
+
+<div class="ft">
+  <div class="top">
+    <p class="nm">unou inc.</p>
+    <div class="nav"><a href="#case">事例</a><a href="#whyus">選ばれる理由</a><a href="#service">できること</a><a href="#recruit">採用</a><a href="#price">料金</a><a href="#faq">よくある質問</a><a href="#contact">無料で相談する</a></div>
+  </div>
+  <p class="copy">©2026 unou inc.　運営会社　プライバシーポリシー</p>
+</div>
+
+</body>
+</html>
