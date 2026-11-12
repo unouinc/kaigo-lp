@@ -1,18 +1,21 @@
 /* kaigo LP — additions on top of the recruit-site stylesheet (same tokens) */
-.k-hero-tags{display:flex;gap:.5rem;margin-bottom:1.5rem}
-.k-hero-tags span{background:#fff;border:1px solid #e6e6e6;border-radius:999px;padding:.1875rem .875rem .25rem;font-weight:700;font-size:.8125rem;line-height:160%;letter-spacing:.04em;color:var(--color-blue)}
-.hero{padding-top:13.75rem;padding-bottom:11.25rem}
+.k-hero-target{color:var(--color-blue);font-weight:700;font-size:1.125rem;line-height:160%;letter-spacing:.06em;margin-bottom:.875rem}
+section.hero{padding-top:9.5rem;padding-bottom:6.5rem}
 .hero .sub-title{font-size:1.0625rem;line-height:170%}
-
-.k-stats{padding-top:3.75rem;text-align:left}
-.k-stats__items{display:flex;gap:1.875rem}
-.k-stats__item{flex:1;background:#f1f1f1;border-radius:10px;padding:2rem 2.25rem 2.125rem}
-.k-stats__label{font-weight:700;font-size:.875rem;color:#9a9a9a;letter-spacing:.02em}
-.k-stats__num{display:flex;align-items:baseline;gap:.25rem;color:var(--color-blue);margin-top:.5rem;line-height:120%}
-.k-stats__num strong{font-family:"Google Sans Flex","Noto Sans JP",sans-serif;font-size:3.75rem;font-weight:600;letter-spacing:.02em;line-height:110%}
-.k-stats__num small,.k-stats__num span{font-size:1.25rem;font-weight:700}
-.k-stats__text{font-size:.9375rem;line-height:160%;margin-top:.625rem}
-.k-stats__note{font-size:.6875rem;color:#9a9a9a;margin-top:.875rem}
+.hero .hero-action{margin-top:2.25rem}
+.hero .hero-image{translate:93% -12%}
+.k-laurels-wrap{margin-top:2rem}
+.k-laurels{display:flex;gap:1.5rem}
+.k-laurel{display:flex;align-items:center;gap:.25rem;color:var(--color-blue)}
+.k-laurel__l,.k-laurel__r{display:block;width:2.125rem;flex-shrink:0;line-height:0}
+.k-laurel__r{transform:scaleX(-1)}
+.k-laurel__svg{width:100%;height:auto;display:block}
+.k-laurel__body{text-align:center;min-width:6.5rem}
+.k-laurel__label{font-weight:700;font-size:.75rem;line-height:140%;letter-spacing:.02em;color:var(--color-text)}
+.k-laurel__num{display:flex;align-items:baseline;justify-content:center;gap:.125rem;margin-top:.1875rem;line-height:110%;white-space:nowrap}
+.k-laurel__num strong{font-family:"Google Sans Flex","Noto Sans JP",sans-serif;font-weight:700;font-size:2.5rem;letter-spacing:.01em;line-height:110%}
+.k-laurel__num small,.k-laurel__num span{font-weight:700;font-size:.875rem}
+.k-laurels__note{font-size:.625rem;color:#9a9a9a;margin-top:.625rem;letter-spacing:.02em}
 
 .k-approach{padding-top:6.25rem}
 .k-approach .reason-contents{display:flex;flex-direction:column;gap:1.875rem}
@@ -104,8 +107,9 @@
 
 .k-stub{padding-top:10rem;padding-bottom:6rem}
 @media screen and (max-width:768px){
-  .k-hero-tags{flex-wrap:wrap}
-  .k-stats__items,.k-case__main,.k-voices,.k-points,.k-steps,.k-price__card{flex-direction:column}
+  .k-laurels{flex-wrap:wrap;gap:.75rem 1rem}
+  section.hero{padding-top:6.5rem;padding-bottom:3rem}
+  .k-case__main,.k-voices,.k-points,.k-steps,.k-price__card{flex-direction:column}
   .k-case__image,.k-price__left{width:100%}
   .k-case__image{height:auto;padding:1.5rem}
   .k-price__left{border-radius:6px 6px 0 0}
