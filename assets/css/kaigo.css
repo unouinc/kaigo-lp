@@ -2,11 +2,11 @@
 .k-hero-target{color:var(--color-blue);font-weight:700;font-size:1.125rem;line-height:160%;letter-spacing:.06em;margin-bottom:.875rem}
 section.hero{padding-top:9.5rem;padding-bottom:6.5rem}
 .hero .sub-title{font-size:1.0625rem;line-height:170%}
-.hero .hero-action{margin-top:2.25rem}
-.hero .hero-image{translate:93% -12%}
+@media screen and (min-width:769px){.hero .hero-action{margin-top:2.25rem}.hero .hero-image{translate:93% -12%}.k-approach .reason-content__title{font-size:2.125rem}}
 .k-laurels-wrap{margin-top:2rem}
 .k-laurels{display:flex;gap:1.5rem}
 .k-laurel{display:flex;align-items:center;gap:.25rem;color:var(--color-blue)}
+.k-laurel__label{color:var(--color-text)}
 .k-laurel__l,.k-laurel__r{display:block;width:2.125rem;flex-shrink:0;line-height:0}
 .k-laurel__r{transform:scaleX(-1)}
 .k-laurel__svg{width:100%;height:auto;display:block}
@@ -19,7 +19,6 @@ section.hero{padding-top:9.5rem;padding-bottom:6.5rem}
 
 .k-approach{padding-top:6.25rem}
 .k-approach .reason-contents{display:flex;flex-direction:column;gap:1.875rem}
-.k-approach .reason-content__title{font-size:2.125rem}
 
 .k-mock{width:100%;background:#fff;border:6px solid #e9e9e9;border-radius:14px;overflow:hidden}
 .k-mock__bar{background:#4e4e4e;height:2rem;display:flex;align-items:center;gap:.3125rem;padding-left:.875rem}
@@ -107,14 +106,51 @@ section.hero{padding-top:9.5rem;padding-bottom:6.5rem}
 
 .k-stub{padding-top:10rem;padding-bottom:6rem}
 @media screen and (max-width:768px){
-  .k-laurels{flex-wrap:wrap;gap:.75rem 1rem}
-  section.hero{padding-top:6.5rem;padding-bottom:3rem}
+  section.hero{padding-top:6.5rem}
+  .k-hero-target{text-align:center;font-size:.9375rem;margin-bottom:.5rem}
+  .hero .sub-title{font-size:.9375rem}
+  .k-laurels-wrap{margin-top:1.25rem}
+  .hero .hero-action{margin-top:14.75rem}
+  .k-laurels{flex-wrap:nowrap;justify-content:center;gap:.375rem}
+  .k-laurel{gap:.0625rem}
+  .k-laurel__l,.k-laurel__r{width:.9375rem}
+  .k-laurel__body{min-width:0}
+  .k-laurel__label{font-size:.5625rem;line-height:135%}
+  .k-laurel__num{margin-top:.125rem}
+  .k-laurel__num strong{font-size:1.3125rem}
+  .k-laurel__num small,.k-laurel__num span{font-size:.625rem}
+  .k-laurels__note{text-align:center;font-size:.5625rem;line-height:150%}
+  .k-mock__body{padding:.875rem .875rem 1rem}
+  .k-mock__row{padding:.625rem .75rem}
+  .k-mock__row b{font-size:.8125rem}
+  .k-mock__tag{flex-direction:column;gap:.125rem;font-size:.875rem;padding:.625rem .75rem}
+  .k-mock__tag--2{margin-left:1rem}
+  .k-sec{margin-top:4rem}
+  .k-en{margin-top:1.75rem}
+  .k-title{font-size:1.625rem;margin-top:1rem}
   .k-case__main,.k-voices,.k-points,.k-steps,.k-price__card{flex-direction:column}
+  .k-case__main{gap:1.5rem;margin-top:1.75rem}
   .k-case__image,.k-price__left{width:100%}
   .k-case__image{height:auto;padding:1.5rem}
-  .k-price__left{border-radius:6px 6px 0 0}
-  .k-price__list li{width:100%}
-  .k-title{font-size:1.75rem}
-  .k-ba__row p:nth-child(1){width:6.5rem}.k-ba__row p:nth-child(2){width:6.5rem}
-  .k-mock__tag--2{margin-left:1rem}
+  .k-case__title{font-size:1.375rem}
+  .k-ba__row p{font-size:.8125rem;padding:.75rem .5rem}
+  .k-ba__row p:nth-child(1){width:6.25rem;font-size:.75rem}
+  .k-ba__row p:nth-child(2){width:6.75rem}
+  .k-case__info{flex-direction:column;align-items:flex-start;gap:.75rem}
+  .k-voices{gap:.75rem;margin-top:1.75rem}
+  .k-voice{padding:1.25rem 1.5rem 1.375rem}
+  .k-voice__q{font-size:1rem}
+  .k-btn{width:100%;justify-content:center}
+  .k-ope{margin-top:4rem}
+  .k-points{gap:.75rem;margin-top:1.75rem}
+  .k-steps{gap:.75rem;margin-top:1.75rem}
+  .k-flow .price-title-box,.k-price .price-title-box{display:block}
+  .k-sub{padding-bottom:0;margin-top:.5rem}
+  .k-price__left{border-radius:6px 6px 0 0;padding:2rem 1.75rem}
+  .k-price__amount strong{font-size:3.75rem}
+  .k-price__right{padding:1.75rem 1.5rem}
+  .k-price__list li{width:100%;font-size:.9375rem}
+  .k-price__list--opt li{flex-wrap:wrap}
+  .k-price__list--opt small{width:100%;margin-left:1.625rem}
+  .k-stub{padding-top:7rem}
 }
