@@ -1,0 +1,6 @@
+# 設定ファイルとサンプルを外から開けないようにする
+<FilesMatch "^(config|config\.sample)\.php$">
+  Require all denied
+</FilesMatch>
+
+Options -Indexes

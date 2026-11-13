@@ -1,0 +1,77 @@
+# main ブランチに入ったら、Xserver の unou.design/public_html/kaigo/ に自動でアップロードする
+#
+# 事前に GitHub の Settings → Secrets and variables → Actions に登録するもの
+#   FTP_SERVER     … Xserverの FTPホスト名（例：sv12345.xserver.jp）
+#   FTP_USERNAME   … FTPユーザー名
+#   FTP_PASSWORD   … FTPパスワード
+#   FTP_SERVER_DIR … アップロード先のフォルダ（末尾に / を付ける）
+#                    ・kaigo 専用のFTPアカウントを作った場合：./
+#                    ・既存のFTPアカウントの場合：/unou.design/public_html/kaigo/
+#   NOTION_TOKEN   … Notionインテグレーションのシークレット（ntn_ で始まる）
+#                    アップロード時に api/config.php を自動で作って置く（リポジトリには含めない）
+#   NOTIFY_EMAIL   … 任意。送信のたびに通知メールも送る宛先
+name: Deploy to Xserver
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check secrets
+        id: check
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        run: |
+          if [ -z "$FTP_SERVER" ]; then
+            echo "FTPのSecretsが未登録のため、アップロードをスキップします。"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.check.outputs.ready == 'true'
+
+      - name: Create api/config.php from secrets
+        if: steps.check.outputs.ready == 'true'
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
+        run: |
+          if [ -z "$NOTION_TOKEN" ]; then
+            echo "NOTION_TOKEN が未登録のため、config.php は作りません。"
+            exit 0
+          fi
+          php -r '
+            $c = require "api/config.sample.php";
+            $c["notion_token"] = getenv("NOTION_TOKEN");
+            $c["notify_email"] = getenv("NOTIFY_EMAIL") ?: "";
+            file_put_contents("api/config.php", "<?php\nreturn " . var_export($c, true) . ";\n");
+          '
+          php -l api/config.php
+
+      - name: Upload via FTP
+        if: steps.check.outputs.ready == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          protocol: ftps
+          # api/config.php は上の手順で作ったものをアップロードする（.htaccess で外からは開けない）
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            README.md
+            wf/**
+            .nojekyll

@@ -1,0 +1,7 @@
+Options -Indexes
+# DM用の短いURL（例：unou.design/kaigo/a）を、計測用パラメータ付きのLPに転送する
+# 文面ごとに a / b を使い分ける。流入元は申し込み時に Notion の「流入元」にも記録される
+RewriteEngine On
+RewriteBase /kaigo/
+RewriteRule ^a/?$ /kaigo/?utm_source=formdm&utm_medium=dm&utm_content=a [R=302,L,NE]
+RewriteRule ^b/?$ /kaigo/?utm_source=formdm&utm_medium=dm&utm_content=b [R=302,L,NE]
