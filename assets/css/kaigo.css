@@ -106,11 +106,11 @@ section.hero{padding-top:9.5rem;padding-bottom:6.5rem}
 
 .k-stub{padding-top:10rem;padding-bottom:6rem}
 @media screen and (max-width:768px){
-  section.hero{padding-top:6.5rem}
+  section.hero{padding-top:5.25rem;padding-bottom:3.125rem}
   .k-hero-target{text-align:center;font-size:.9375rem;margin-bottom:.5rem}
-  .hero .sub-title{font-size:.9375rem}
+  .hero .sub-title{font-size:.8125rem}
   .k-laurels-wrap{margin-top:1.25rem}
-  .hero .hero-action{margin-top:14.75rem}
+  .hero .hero-action{margin-top:16rem}
   .k-laurels{flex-wrap:nowrap;justify-content:center;gap:.375rem}
   .k-laurel{gap:.0625rem}
   .k-laurel__l,.k-laurel__r{width:.9375rem}
