@@ -96,8 +96,9 @@ if ($d['name'] === '') {
 if (!filter_var($d['email'], FILTER_VALIDATE_EMAIL)) {
     $errors['email'] = 'メールアドレスを正しく入力してください。';
 }
-// 電話番号は任意。入力がある場合だけ形式を確認する
-if ($d['tel'] !== '' && !preg_match('/^[0-9０-９\-－‐+()（）\s]{10,20}$/u', $d['tel'])) {
+if ($d['tel'] === '') {
+    $errors['tel'] = '電話番号を入力してください。';
+} elseif (!preg_match('/^[0-9０-９\-－‐+()（）\s]{10,20}$/u', $d['tel'])) {
     $errors['tel'] = '電話番号を正しく入力してください。';
 }
 if ($errors) {

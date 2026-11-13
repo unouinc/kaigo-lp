@@ -10,7 +10,7 @@
 	var RULES={
 		company:function(v){return v?'':'法人名・施設名を入力してください。';},
 		name:function(v){return v?'':'お名前を入力してください。';},
-		tel:function(v){return (!v||/^[0-9０-９\-－‐+()（）\s]{10,20}$/.test(v))?'':'電話番号を正しく入力してください。';},
+		tel:function(v){return !v?'電話番号を入力してください。':(/^[0-9０-９\-－‐+()（）\s]{10,20}$/.test(v)?'':'電話番号を正しく入力してください。');},
 		email:function(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)?'':'メールアドレスを正しく入力してください。';}
 	};
 	var utm=(function(){try{var q=new URLSearchParams(location.search),o=[];['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){if(q.get(k))o.push(k.replace('utm_','')+'='+q.get(k));});return o.join(' / ');}catch(e){return '';}})();
